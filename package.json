@@ -4,7 +4,7 @@
   "description": "A module for keeping consistent JS coding standards at WML",
   "main": "index.js",
   "scripts": {
-    "format": "prettier --print-width 100 --write \"**/*.js\"",
+    "format": "prettier --print-width 100 --write *.{js,jsx} `find . -type d -d 1 -exec echo '{}/**/*.{js,jsx}' \\; | egrep -v '(/node_modules/|/dist/|/coverage/)'`",
     "postinstall": "scripts/install.js",
     "precommit": "lint-staged"
   },

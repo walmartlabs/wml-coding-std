@@ -9,6 +9,8 @@ fs.writeFileSync(
     {
       scripts: Object.assign(
         {
+          format:
+            "prettier --print-width 100 --write *.{js,jsx} `find . -type d -d 1 -exec echo '{}/**/*.{js,jsx}' \\; | egrep -v '(/node_modules/|/dist/|/coverage/)'`",
           precommit: "lint-staged"
         },
         package.scripts
