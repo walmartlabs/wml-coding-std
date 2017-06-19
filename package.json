@@ -28,11 +28,9 @@
     "prettier": "^1.4.4"
   },
   "lint-staged": {
-    "**/*.js": {
-      "*.js": [
-        "prettier --max-length 100 --write",
-        "git add"
-      ]
-    }
+    "**/*.js": [
+      "prettier --max-length 100 --write",
+      "git add"
+    ]
   }
 }
