@@ -8,11 +8,10 @@ let rootDir = __dirname.split("/node_modules", 1)[0] || path.resolve(".");
 if (rootDir === __dirname) {
   rootDir = path.resolve(".");
 }
+const pkg = require(path.resolve(rootDir, "package.json"));
 
 // Do not run install script if this package is the root
 if (rootDir !== path.resolve(".")) {
-  const pkg = require(path.resolve(rootDir, "package.json"));
-
   fs.writeFileSync(
     path.resolve(rootDir, "package.json"),
     JSON.stringify(
