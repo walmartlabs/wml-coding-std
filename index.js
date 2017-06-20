@@ -1,3 +1,5 @@
+"use strict";
+
 const prettier = require("prettier");
 
 module.exports = function(source, options = { printWidth: 100 }) {
