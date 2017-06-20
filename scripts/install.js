@@ -19,7 +19,7 @@ if (rootDir !== path.resolve(".")) {
         scripts: Object.assign(
           {
             format:
-              "prettier --print-width 100 --write *.{js,jsx} `find . -type d -d 1 -exec echo '{}/**/*.{js,jsx}' \\; | egrep -v '(/node_modules/|/dist/|/coverage/)'`",
+              "prettier --print-width 100 --write '**/!(node_modules|dist|coverage)/*.{js,jsx}' '*.{js,jsx}'",
             precommit: "lint-staged"
           },
           pkg.scripts
