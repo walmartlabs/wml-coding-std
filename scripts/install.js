@@ -1,14 +1,17 @@
+#!/usr/bin/env node
 "use strict";
 
 const fs = require("fs");
 const path = require("path");
 
-const pkg = require("./package.json");
+const rootDir = __dirname.split("/node_modules")[0];
+
+const pkg = require(path.resolve(rootDir, "package.json"));
 
 fs.writeFileSync(
-  path.resolve(__dirname, "package.json"),
-  Object.assign(
-    {
+  path.resolve(rootDir, "package.json"),
+  JSON.stringify(
+    Object.assign(pkg, {
       scripts: Object.assign(
         {
           format:
@@ -23,7 +26,6 @@ fs.writeFileSync(
         },
         pkg["lint-staged"]
       )
-    },
-    pkg
+    })
   )
 );
