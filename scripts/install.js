@@ -4,7 +4,7 @@
 const fs = require("fs");
 const path = require("path");
 
-let rootDir = __dirname.split("/node_modules", 1)[0] || path.resolve(".");
+let rootDir = __dirname.split("/node_modules", 1)[0];
 if (rootDir === __dirname) {
   rootDir = path.resolve(".");
 }
