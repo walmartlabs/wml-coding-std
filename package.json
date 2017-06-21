@@ -1,6 +1,6 @@
 {
   "name": "wml-coding-std",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "A module for keeping consistent JS coding standards at WML",
   "main": "index.js",
   "scripts": {
