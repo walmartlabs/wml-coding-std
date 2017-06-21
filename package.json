@@ -1,0 +1,46 @@
+{
+  "name": "wml-coding-std",
+  "version": "0.0.0",
+  "description": "A module for keeping consistent JS coding standards at WML",
+  "main": "index.js",
+  "scripts": {
+    "format": "prettier --print-width 100 --write '**/!(node_modules)/*.js' '*.js'",
+    "lint": "eslint '**/!(node_modules)/*.js' '*.js'",
+    "postinstall": "scripts/install.js",
+    "precommit": "lint-staged",
+    "prepublish": "npm test",
+    "preversion": "npm test",
+    "test": "npm run format && npm run lint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/walmartlabs/wml-coding-std.git"
+  },
+  "keywords": [
+    "eslint",
+    "prettier"
+  ],
+  "author": "Mark Brouch <mark.brouch@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/walmartlabs/wml-coding-std/issues"
+  },
+  "homepage": "https://github.com/walmartlabs/wml-coding-std#readme",
+  "dependencies": {
+    "babel-eslint": "^7.2.3",
+    "eslint": "^4.0.0",
+    "eslint-config-prettier": "^2.2.0",
+    "eslint-config-walmart": "^1.2.4",
+    "eslint-plugin-filenames": "^1.2.0",
+    "eslint-plugin-react": "^7.1.0",
+    "husky": "^0.13.4",
+    "lint-staged": "^4.0.0",
+    "prettier": "^1.4.4"
+  },
+  "lint-staged": {
+    "**/*.js": [
+      "prettier --max-length 100 --write",
+      "git add"
+    ]
+  }
+}

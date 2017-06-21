@@ -1,0 +1,7 @@
+{
+  "extends": [
+    "walmart/configurations/es6-node",
+    "prettier",
+    "prettier/react"
+  ]
+}
