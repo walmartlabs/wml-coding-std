@@ -33,7 +33,7 @@
     "eslint-config-walmart": "^1.2.4",
     "eslint-plugin-filenames": "^1.2.0",
     "eslint-plugin-react": "^7.1.0",
-    "husky": "^0.13.4",
+    "husky": "^0.14.3",
     "lint-staged": "^4.0.0",
     "prettier": "^1.4.4"
   },
