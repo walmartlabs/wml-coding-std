@@ -29,7 +29,7 @@
   "dependencies": {
     "babel-eslint": "^7.2.3",
     "eslint": "^4.0.0",
-    "eslint-config-prettier": "^2.2.0",
+    "eslint-config-prettier": "^2.10.0",
     "eslint-config-walmart": "^1.2.4",
     "eslint-plugin-filenames": "^1.2.0",
     "eslint-plugin-react": "^7.1.0",
